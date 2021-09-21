@@ -1,0 +1,222 @@
+.course-popup {
+    width: 144rem;
+    margin: 0 auto;
+
+    @media(max-width: 992px) {
+        width: 100%;
+    }
+
+    button.mfp-close {
+        top: 6.4rem;
+        right: calc((100vw - 144rem) / 2 + 6.4rem);
+
+        @media(max-width: 992px) {
+            top: 3rem;
+            right: 5rem;
+        }
+
+        @media(max-width: 500px) {
+            right: 3rem;
+        }
+    }
+
+    // .course-popup__slider
+
+    &__slider {
+        //margin: 0 -2rem;
+
+        .slider-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @media(max-width: 992px) {
+                top: 20rem;
+                transform: none;
+            }
+
+            @media(max-width: 500px) {
+                top: 15rem;
+            }
+
+            &--prev {
+                left: 3rem;
+
+                @media(max-width: 500px) {
+                    left: 1rem;
+                }
+            }
+
+            &--next {
+                right: 3rem;
+
+                @media(max-width: 500px) {
+                    right: 1rem;
+                }
+            }
+        }
+
+        .slick-arrow {
+            svg path {
+                stroke: $yellow;
+            }
+        }
+
+        .slick-disabled {
+            svg path {
+                stroke: rgba($dark-gray, .5);
+            }
+
+            @media (any-hover: hover) {
+                &:hover {
+                    svg path {
+                        stroke: rgba($dark-gray, .5);
+                    }
+                }
+            }
+        }
+
+        .slick-list {
+            overflow: hidden;
+        }
+
+        .slick-slide {
+            opacity: 1;
+            margin-right: 0;
+        }
+    }
+}
+
+.course-popup-item {
+    min-height: 88rem;
+    //margin: 0 2rem;
+    padding: 5rem 13rem 5rem 0;
+
+    @media(max-width: 992px) {
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+
+    @media(max-width: 768px) {
+        padding: 3rem;
+    }
+
+    @media(max-width: 500px) {
+        padding: 2rem;
+    }
+
+    &__inner {
+        @media(min-width: 992px) {
+            display: flex;
+            align-items: flex-start;
+        }
+    }
+
+    // .course-popup-item__img
+
+    &__img {
+        width: 44.6rem;
+        height: 44.6rem;
+        flex-shrink: 0;
+
+        @media(max-width: 992px) {
+            width: auto;
+            height: auto;
+            margin: 0 auto;
+
+            img {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    // .course-popup-item__content
+
+    &__content {
+        padding-top: 7rem;
+
+        @media(max-width: 992px) {
+            padding-top: 3rem;
+        }
+    }
+
+    // .course-popup-item__title
+
+    &__title {
+
+        .decor {
+            &:before {
+                height: 12rem;
+            }
+        }
+    }
+
+    // .course-popup-item__subtitle
+
+    &__subtitle {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 14rem;
+        margin-top: 2rem;
+
+        @media(max-width: 992px) {
+            padding-right: 10rem;
+        }
+
+        @media(max-width: 500px) {
+            padding-right: 0;
+            margin-top: 0;
+        }
+    }
+
+    // .course-popup-item__labels
+
+    &__labels {
+        display: flex;
+        //justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 4.25rem -0.75rem 3.75rem;
+
+        @media(max-width: 992px) {
+            margin-top: 2.25rem;
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    // .course-popup-item__label
+
+    &__label {
+        border-radius: 9.5rem;
+        padding: 1.6rem 2.675rem;
+        font-size: 2.4rem;
+        line-height: 2.3rem;
+        margin: 0.75rem;
+
+        @media(max-width: 992px) {
+            padding: 1.4rem 2rem;
+            font-size: 1.4rem;
+            line-height: 1.7rem;
+        }
+    }
+
+    // .course-popup-item__text
+
+    &__text {
+        margin-bottom: 5rem;
+
+        @media(max-width: 992px) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    // .course-popup-item__btn
+
+    &__btn {
+        padding-left: 3.5rem;
+        padding-right: 3.5rem;
+
+        @media(max-width: 500px) {
+            width: 100%;
+        }
+    }
+}

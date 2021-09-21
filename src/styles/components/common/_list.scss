@@ -1,0 +1,43 @@
+.list {
+    grid-gap: 4rem;
+
+    @media(max-width: 992px) {
+        grid-gap: 2rem;
+    }
+
+    @media(max-width: 768px) {
+        grid-gap: 1.5rem;
+    }
+
+    @media(max-width: 500px) {
+        grid-gap: 1rem;
+    }
+
+    &__item {
+        position: relative;
+        padding-left: 8rem;
+        @extend %inter-text-24;
+
+        @media(max-width: 992px) {
+            padding-left: 5rem;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 1rem;
+            left: 0;
+            width: 4rem;
+            height: 2.4rem;
+            background-color: $yellow;
+            border-radius: 6.8rem;
+            transform: rotate(-3deg);
+
+            @media(max-width: 992px) {
+                width: 2.5rem;
+                height: 1.2rem;
+                top: 0.5rem;
+            }
+        }
+    }
+}

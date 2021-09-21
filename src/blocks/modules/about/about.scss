@@ -1,0 +1,361 @@
+.about {
+
+    &:before {
+        top: 32.4rem;
+    }
+
+    // .about__big-title
+
+    &__big-title {
+        margin-bottom: 4.8rem;
+
+        @media(max-width: 992px) {
+            margin-bottom: 4rem;
+            font-size: 2.2rem;
+            line-height: 2.1rem;
+        }
+
+        span:before {
+            width: 82.5rem;
+            @extend %pos-center-y;
+            transform: translateY(-50%) rotate(-3deg);
+            right: -1.113rem;
+
+            @media(max-width: 992px) {
+                width: 23.7rem;
+                height: 3.5rem;
+                right: -1rem;
+                top: 0;
+                transform: rotate(-3deg);
+            }
+        }
+
+        .line-2 {
+            margin-left: -25.2rem;
+
+            @media(max-width: 992px) {
+                margin-left: -8.6rem;
+            }
+        }
+    }
+
+    // .about__cards
+
+    &__cards {
+        width: 94.4rem;
+        grid-gap: 4.8rem;
+        margin-top: 8rem;
+
+        @media(max-width: 992px) {
+            width: 100%;
+            margin-top: 4rem;
+        }
+
+        @media(max-width: 768px) {
+            display: block;
+        }
+
+        @media(max-width: 500px) {
+            margin-top: 2rem;
+        }
+    }
+
+    // .about__card
+
+    &__card {
+        padding: 1.5rem 4.5rem 4rem 3.2rem;
+
+        @media(max-width: 992px) {
+            padding: 1.5rem 1.5rem 2rem 2.4rem;
+        }
+
+        @media(max-width: 768px) {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    &__card+&__card {
+        @media(max-width: 768px) {
+            margin-top: 4rem;
+        }
+
+        @media(max-width: 500px) {
+            margin-top: 2rem;
+        }
+    }
+}
+
+.about-card {
+    @extend %flex-col-center;
+
+    // .about-card__img
+
+    &__img {
+        @extend %flex-center;
+        width: 22.5rem;
+        height: 18.5rem;
+        margin: 0 auto -1.8rem;
+        transition: .3s transform;
+        position: relative;
+        z-index: 9;
+    }
+
+    // .about-card__title
+
+    &__title {
+        position: relative;
+        z-index: 10;
+        display: inline-block;
+        border-radius: 9.5rem;
+        font-size: 2.4rem;
+        line-height: 2.3rem;
+        font-weight: 500;
+        padding: 1.6rem 2.4rem;
+        margin-bottom: 2.4rem;
+
+        @media(max-width: 992px) {
+            font-size: 1.6rem;
+            line-height: 1.5rem;
+            padding: 1.3rem 2.5rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    // .about-card__text
+
+    &__text {
+        text-align: center;
+
+        @media(max-width: 992px) {
+            font-size: 1.2rem;
+            line-height: 1.9rem;
+        }
+
+        span {
+            text-decoration: line-through;
+        }
+    }
+
+    &:nth-child(1) {
+        @media (any-hover: hover) {
+            &:hover {
+                .about-card__img {
+                    transform: rotate(10deg);
+                }
+            }
+        }
+    }
+
+    &:nth-child(2) {
+        @media (any-hover: hover) {
+            &:hover {
+                .about-card__img {
+                    transform: translateY(-1rem);
+                }
+            }
+        }
+    }
+}
+
+.about-us {
+
+    position: relative;
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        width: 66.5rem;
+        height: 123.3rem;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @media(max-width: 1200px) {
+            display: none;
+        }
+    }
+
+    &:before {
+        top: -35rem;
+        left: -30rem;
+        background-image: url(../img/decor-lines/about-page-left.svg);
+    }
+
+    &:after {
+        top: -10rem;
+        right: -60rem;
+        background-image: url(../img/decor-lines/about-page-right.svg);
+    }
+
+
+    &__top {
+        margin-bottom: 13rem;
+
+        @media(max-width: 992px) {
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__list {
+        margin: 2rem 0;
+    }
+
+    // .about-page__content
+
+    &__content {
+        width: 87.8rem;
+        margin-left: auto;
+
+        @media(max-width: 992px) {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    // .about-page__text
+
+    &__text {
+
+        p+p {
+            margin-top: 2.4rem;
+
+            @media(max-width: 992px) {
+                margin-top: 2rem;
+            }
+
+            @media(max-width: 500px) {
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
+.we-teach {
+
+    padding: 10.8rem 0 17.2rem;
+
+    @media(max-width: 992px) {
+        padding: 4rem 0 6rem;
+    }
+
+    // .we-teach__list
+
+    &__list {
+        margin-top: 9.2rem;
+        margin-bottom: 12rem;
+
+        @media(max-width: 992px) {
+            margin: 5rem 0;
+        }
+    }
+
+    // .we-teach__item
+
+    &__item {
+        position: relative;
+
+        @media(min-width: 992px) {
+            display: block;
+        }
+
+        @media(min-width: 768px) {
+            display: flex;
+            align-items: center;
+        }
+
+        &:nth-child(3) {
+            .we-teach__item-img {
+                justify-content: flex-end;
+
+                @media(max-width: 992px) {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+
+    &__item+&__item {
+        margin-top: 15rem;
+
+        @media(max-width: 992px) {
+            margin-top: 5rem;
+        }
+    }
+
+    // .we-teach__item-img
+
+    &__item-img {
+        @extend %pos-center-y;
+        left: -36.4rem;
+        width: 28.4rem;
+        display: flex;
+        justify-content: center;
+
+        @media(max-width: 992px) {
+            width: 20rem;
+            position: static;
+            transform: none;
+            margin-right: 3rem;
+        }
+
+        @media(max-width: 768px) {
+            margin-right: 0;
+            margin-bottom: 3rem;
+        }
+
+        img {
+            margin: 0 auto;
+        }
+    }
+
+    // .we-teach__item-title
+
+    &__item-title {
+        .decor {
+            &:before {
+                height: 7.2rem;
+            }
+        }
+
+        .no-decor {
+            display: block;
+        }
+    }
+}
+
+.about-company {
+    .about {
+        padding-top: 0;
+        background-color: $white;
+        &:before {
+            top: 9rem;
+            left: -5rem;
+        }
+    }
+
+    .s-coaches {
+        background-color: $pink;
+    }
+
+    .licenses {
+        padding-bottom: 24rem;
+
+        @media(max-width: 992px) {
+            padding-bottom: 4rem;
+        }
+
+        &:before {
+            display: none;
+        }
+    }
+
+    .ceo {
+        padding-top: 20rem;
+
+        @media(max-width: 992px) {
+            padding-top: 4rem;
+        }
+    }
+}

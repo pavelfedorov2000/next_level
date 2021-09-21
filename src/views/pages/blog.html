@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../_head.html', {
+"title": "Блог"
+})
+
+<body>
+
+    <div class="wrapper">
+        @@include('../../blocks/modules/header/_header.html')
+
+        <nav class="breadcrumbs">
+            <div class="container">
+                <ol class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a href="#">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="#">
+                            База знаний
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="#">
+                            Блог
+                        </a>
+                    </li>
+                </ol>
+            </div>
+        </nav>
+
+        <main class="p-blog">
+            <div class="container">
+                <h1 class="page-title">Блог</h1>
+                <section class="section recommend-to-read">
+                    <div class="section__inner">
+                        <h2 class="section-title">
+                            Рекомендуем<br>
+                            почитать
+                        </h2>
+                        <div class="section__content">
+                            <div class="text recommend-to-read__text">
+                                <p>Узнавайте первыми об инновациях сферы личностного роста.</p>
+                                <p>Изучайте опыт профессионалов.</p>
+                                <p>Применяйте рекомендации экспертов.</p>
+                                <p>Оставайтесь в курсе трендов.</p>
+                            </div>
+                            <div class="big-decor-title recommend-to-read__title">
+                                <span class="decor">Достигайте успеха</span>
+                                <span class="no-decor">с помощью материалов блога.</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="blog">
+                    <h2 class="section-title">Рубрика</h2>
+                    <div class="blog__filter-buttons">
+                        <a href="#all" class="filter-btn tab tab--active">Все направления</a>
+                        <a href="#leadership" class="filter-btn tab">Лидерство</a>
+                        <a href="#communication" class="filter-btn tab">Коммуникативные
+                            навыки</a>
+                        <a href="#presentation" class="filter-btn tab">Навыки проведения
+                            презентаций</a>
+                        <a href="#welfare" class="filter-btn tab">Эмоциональное здоровье</a>
+                        <a href="#management" class="filter-btn tab">Навыки управления</a>
+                    </div>
+                    <div class="blog__items">
+                        @@include('../../blocks/modules/blog/sections/_leadership.html')
+                        @@include('../../blocks/modules/blog/sections/_communication-skills.html')
+                        @@include('../../blocks/modules/blog/sections/_presentation-skills.html')
+                        @@include('../../blocks/modules/blog/sections/_welfare.html')
+                        @@include('../../blocks/modules/blog/sections/_management.html')
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        @@include('../../blocks/modules/footer/_footer.html')
+
+        @@include('../../blocks/modules/popups/_popups.html')
+    </div>
+
+    @@include('../_js.html')
+
+</body>
+
+</html>

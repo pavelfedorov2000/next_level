@@ -1,0 +1,44 @@
+.become-ambassador {
+    &:before {
+        width: 76.8rem;
+        height: 176.4rem;
+        bottom: -50rem;
+    }
+
+    // .become-ambassador__item
+
+    &__item+&__item {
+        padding-top: 20rem;
+
+        @media(max-width: 992px) {
+            padding-top: 10rem;
+        }
+
+        @media(max-width: 768px) {
+            padding-top: 5rem;
+        }
+    }
+}
+
+.what-to-do {
+
+    // .what-to-do__cards
+
+    &__cards {
+        align-items: flex-start;
+    }
+
+    &__col {
+        &:nth-child(2) {
+            .what-to-do__card {
+                &:first-child {
+                    margin-top: $gap;
+
+                    @media(max-width: 500px) {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}

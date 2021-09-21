@@ -1,0 +1,43 @@
+.ceo {
+    padding-top: 0;
+
+    &:before{
+        bottom: -12rem;
+        right: -25rem;
+        width: 68rem;
+        height: 102.7rem;
+        background-image: url(../img/decor-lines/decor-680.svg);
+    }
+
+    // .ceo__name
+
+    &__name {
+        @extend %title-80;
+        text-transform: uppercase;
+        margin: 4rem 0;
+
+        @media(max-width: 992px) {
+            text-align: center;
+        }
+
+        @media(max-width: 768px) {
+            margin: 2rem 0;
+        }
+    }
+
+    // .ceo__photo
+
+    &__photo {
+        transition: .3s transform;
+
+        @media(max-width: 992px) {
+            margin: 0 auto;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}

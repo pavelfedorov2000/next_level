@@ -1,0 +1,15 @@
+<header class="header">
+    <div class="header__inner container">
+        <div class="logo header__logo">
+            <a class="logo__link" href="#">
+                <img class="logo__img" src="img/logo/header-logo.svg" alt="Логотип Fluent Skills">
+            </a>
+        </div>
+        @@include('./_header__menu.html')
+        <button class="enter-btn header__enter" data-da=".header__menu, 768, last">
+            <img src="img/enter.svg" alt="иконка входа">
+            Войти
+        </button>
+        @@include('../burger/burger-btn/_burger-btn.html')
+    </div>
+</header>

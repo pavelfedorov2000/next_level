@@ -1,0 +1,71 @@
+.ambassadors {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 43rem;
+        left: -7rem;
+        width: 65.8rem;
+        height: 189.4rem;
+        background-image: url(../img/decor-lines/decor-658.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @media(max-width: 992px) {
+            display: none;
+        }
+    }
+}
+
+.about-ambassadors {
+    padding-bottom: 5.9rem;
+
+    @media (max-width: 500px) {
+        padding-bottom: 3rem;
+    }
+
+    &__inner {
+        @media (min-width: 768px) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    // .about-ambassadors__img
+
+    &__img {
+        width: 82rem;
+        margin-bottom: -11.5rem;
+
+        @media (max-width: 992px) {
+            width: auto;
+            margin-bottom: 0;
+        }
+    }
+
+    // .about-ambassadors__text
+
+    &__text {
+        width: 73.5rem;
+        padding-left: 3rem;
+
+        @media (max-width: 768px) {
+            width: 100%;
+            padding-left: 0;
+        }
+
+        p+p {
+            margin-top: 4rem;
+
+            @media (max-width: 992px) {
+                margin-top: 2rem;
+            }
+
+            @media (max-width: 500px) {
+                margin-top: 1rem;
+            }
+        }
+    }
+}

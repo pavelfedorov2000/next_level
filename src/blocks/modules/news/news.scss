@@ -1,0 +1,122 @@
+.news {
+
+    position: relative;
+    z-index: 1;
+
+    &__list-block {
+        line-height: 3.1rem;
+    }
+
+    &__list {
+        margin-top: 4rem;
+
+        @media(max-width: 992px) {
+            margin-top: 2rem;
+        }
+    }
+
+    &__cards {
+        grid-gap: $gap;
+
+        &.more {
+            margin-top: $gap;
+
+            @media(max-width: 992px) {
+                margin-top: 3rem;
+            }
+
+            @media(max-width: 768px) {
+                margin-top: 2rem;
+            }
+
+            @media(max-width: 500px) {
+                margin-top: 1.5rem;
+            }
+
+            .news__card {
+                &:nth-child(7n+1) {
+                    grid-column: span 2;
+
+                    @media(max-width: 768px) {
+                        grid-column: span 3;
+                    }
+
+                    @media(max-width: 500px) {
+                        grid-column: span 6;
+                    }
+                }
+
+                &:nth-child(7n+2) {
+                    grid-column: span 4;
+
+                    @media(max-width: 768px) {
+                        grid-column: span 3;
+                    }
+
+                    @media(max-width: 500px) {
+                        grid-column: span 6;
+                    }
+
+                    .blog-card__title {
+                        max-width: 66rem;
+
+                        @media(max-width: 768px) {
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__card {
+        grid-column: span 2;
+
+        @media(max-width: 768px) {
+            grid-column: span 3;
+        }
+
+        @media(max-width: 500px) {
+            grid-column: span 6;
+        }
+
+        &:nth-child(7n+1) {
+            grid-column: span 4;
+
+            @media(max-width: 768px) {
+                grid-column: span 3;
+            }
+
+            @media(max-width: 500px) {
+                grid-column: span 6;
+            }
+
+            .blog-card__title {
+                max-width: 66rem;
+
+                @media(max-width: 768px) {
+                    max-width: 100%;
+                }
+            }
+        }
+
+        &:nth-child(7n+3) {
+            @media(max-width: 768px) {
+                grid-column: span 6;
+            }
+        }
+
+        &:nth-child(7n-1),
+        &:nth-child(7n) {
+            grid-column: span 3;
+
+            @media(max-width: 500px) {
+                grid-column: span 6;
+            }
+        }
+    }
+}
+
+.more-news {
+    display: none;
+}

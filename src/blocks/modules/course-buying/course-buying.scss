@@ -1,0 +1,143 @@
+.course-buying {
+
+    // .course-buying__content
+
+    &__content {
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    // .course-buying__title
+
+    &__title {
+        margin-bottom: 6rem;
+
+        @media(max-width: 992px) {
+            margin-bottom: 3rem;
+        }
+
+        .decor:before {
+            height: 12.2rem;
+        }
+    }
+
+    // .course-buying__card
+
+    &__card {
+        background-color: $yellow;
+        border-radius: 5.7rem;
+        padding: 10rem 6.8rem 10rem 8rem;
+
+        @media(max-width: 992px) {
+            padding: 5rem;
+        }
+
+        @media(max-width: 768px) {
+            padding: 3rem;
+        }
+
+        @media(max-width: 500px) {
+            padding: 2rem;
+            border-radius: 3.2rem;
+        }
+    }
+}
+
+.buy-card {
+
+    // .buy-card__title
+
+    &__title {
+        margin-bottom: 5.4rem;
+
+        @media(max-width: 992px) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    // .buy-card__price
+
+    &__price {
+        margin-bottom: 5.4rem;
+
+        @media(max-width: 992px) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    &__price-value {
+        margin-top: 1.8rem;
+
+        @media(max-width: 768px) {
+            margin-top: 1rem;
+        }
+    }
+
+    // .buy-card__inputs
+
+    &__inputs {
+        margin-bottom: 6rem;
+
+        @media(max-width: 992px) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    // .buy-card__payment-items
+
+    &__payment-items {
+        counter-reset: pay;
+        margin: 4rem 0 10rem;
+
+        @media(max-width: 992px) {
+            margin: 2rem 0 4rem;
+        }
+    }
+
+    // .buy-card__payment-item
+
+    &__payment-item {
+        position: relative;
+
+        &:before {
+            content: counter(pay)'.';
+            counter-increment: pay;
+            position: absolute;
+            top: 2.4rem;
+            left: 2.4rem;
+            z-index: 101;
+            @extend %title-80;
+            color: $yellow;
+
+            @media(max-width: 768px) {
+                left: 1.5rem;
+                top: 1.5rem;
+            }
+        }
+
+        .radio-box:checked+.buy-card__payment-item-content {
+            border-width: 0.2rem;
+            background-color: $pink;
+        }
+    }
+
+    &__payment-item-content {
+        display: block;
+        cursor: pointer;
+        padding: 6.4rem 0.4rem 4rem 11rem;
+        border: 0.1rem solid $dark-gray;
+        @media(max-width: 992px) {
+            padding-top: 5rem;
+            padding-left: 7rem;
+            padding-bottom: 3rem;
+        }
+
+        @media(max-width: 768px) {
+            padding-left: 1.5rem;
+        }
+    }
+
+    &__form-footer {
+        align-items: center;
+    }
+}

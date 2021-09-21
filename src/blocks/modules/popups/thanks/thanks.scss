@@ -1,0 +1,25 @@
+.thanks-popup {
+    width: 60rem;
+    padding: 7rem 5rem;
+    @media(max-width: 768px) {
+        width: 50rem;
+        padding: 5rem 3rem;
+    }
+    @media(max-width: 500px) {
+        width: 100%;
+    }
+    &__title {
+        margin-bottom: 3rem;
+        @media(max-width: 768px) {
+            margin-bottom: 2rem;
+        }
+    }
+    button.mfp-close {
+        top: 3rem;
+        right: 3rem;
+        @media(max-width: 500px) {
+            top: 2rem;
+            right: 2rem;
+        }
+    }
+}

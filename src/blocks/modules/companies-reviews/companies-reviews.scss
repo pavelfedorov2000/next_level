@@ -1,0 +1,89 @@
+.companies-reviews {
+
+    // .companies-reviews__arrows
+
+    &__arrows {
+        padding-top: 0;
+    }
+
+    // .companies-reviews__slider
+
+    &__slider {
+        margin-bottom: 6rem;
+
+        @media(max-width: 992px) {
+            margin-bottom: 4rem;
+        }
+
+        @media(max-width: 500px) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    // .companies-reviews__slider-item
+
+    &__slider-item {
+        min-height: 51rem;
+        padding: 4rem 3.4rem 3rem 3.2rem;
+
+        @media(max-width: 992px) {
+            min-height: 45rem;
+            padding: 3rem;
+        }
+
+        @media(max-width: 500px) {
+            padding: 2rem;
+        }
+    }
+}
+
+.p-companies__top-text {
+    padding-top: 0;
+    margin-right: 0;
+    margin-left: auto;
+
+    @media(max-width: 992px) {
+        padding-top: 0;
+    }
+}
+
+.company-review {
+
+    // .company-review__text
+
+    &__text {
+        @extend %inter-text-16;
+
+        @media(max-width: 500px) {
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+        }
+
+        p+p {
+            margin-top: 2.5rem;
+
+            @media(max-width: 992px) {
+                margin-top: 2rem;
+            }
+
+            @media(max-width: 500px) {
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    // .company-review__title
+
+    &__title {
+        font-weight: 500;
+        font-size: 2.4rem;
+        line-height: 2.3rem;
+        color: $dark;
+        margin-top: 2.5rem;
+
+        @media(max-width: 500px) {
+            font-size: 2rem;
+            margin-top: 1.5rem;
+        }
+    }
+}

@@ -1,0 +1,140 @@
+.clients {
+
+    // .clients__content
+
+    &__content {
+
+        @media(max-width: 992px) {
+            margin-top: 4.5rem;
+        }
+
+        @media(max-width: 768px) {
+            width: 100%;
+            margin-left: 0;
+            margin-top: 2rem;
+        }
+    }
+
+    &__arrows {
+        padding: 6.4rem 0 $gap;
+
+        @media(max-width: 992px) {
+            padding: 3rem 0 5rem;
+        }
+    }
+
+    // .clients__cards
+
+    &__cards {
+       margin-bottom: 10rem;
+
+        @media(max-width: 992px) {
+            margin-bottom: 5rem;
+        }
+
+        @media(max-width: 500px) {
+            overflow: hidden;
+            margin: 0 0 3rem 0;
+        }
+
+        .slick-list {
+            @media(max-width: 768px) {
+                overflow-x: hidden;
+            }
+        }
+
+        .slick-slide {
+            margin-right: $gap;
+
+            @media(max-width: 768px) {
+                margin-right: 2.5rem;
+            }
+
+            @media(max-width: 500px) {
+                margin: 0;
+            }
+
+            >div+div {
+                margin-top: 4rem;
+
+                @media(max-width: 992px) {
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+
+    // .clients__card
+
+    &__card {
+        width: 20rem !important;
+        height: 16rem;
+        background-color: $white;
+        border-radius: 3.2rem;
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+        transition: .3s transform;
+
+        @media (any-hover: hover) {
+            &:hover {
+                transform: scale(1.025);
+            }
+        }
+
+        @media(max-width: 500px) {
+            width: 100% !important;
+        }
+
+        &:nth-child(7) {
+            @media(max-width: 992px) {
+                grid-column: span 3;
+            }
+
+            @media(max-width: 768px) {
+                grid-column: span 1;
+            }
+        }
+
+        &:nth-child(8) {
+            @media(max-width: 992px) {
+                grid-column: span 3;
+            }
+
+            @media(max-width: 768px) {
+                grid-column: span 1;
+            }
+        }
+
+        @media(max-width: 768px) {
+            height: 9.6rem;
+            border-radius: 1.9rem;
+            padding: 0.6rem;
+        }
+
+        img {
+            @media(max-width: 768px) {
+                max-width: 10.8rem;
+            }
+        }
+    }
+}
+
+.numbers {
+    // .numbers__item
+
+    &__item {
+        text-align: center;
+
+        @media(max-width: 500px) {
+            text-align: right;
+        }
+    }
+
+    // .numbers__item-descr
+
+    &__item-descr {
+        @extend %inter-text-16;
+    }
+}

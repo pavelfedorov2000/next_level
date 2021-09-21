@@ -1,0 +1,154 @@
+@import './vars';
+@import './mixins';
+@import './fonts';
+@import './null';
+
+@import './grid';
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+}
+
+.page-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.home-page {
+
+    .coaches-slider,
+    .s-coaches__arrows {
+        display: none;
+    }
+
+    .s-coaches,
+    .events {
+        @media(max-width: 500px) {
+            padding-bottom: 0;
+        }
+    }
+}
+
+.decor-curve {
+    position: relative;
+    &:before {
+        content: '';
+        position: absolute;
+        z-index: 99;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @media(max-width: 1200px) {
+            display: none;
+        }
+    }
+    &--658 {
+        &:before {
+            left: 0;
+            width: 65.8rem;
+            height: 189.4rem;
+            background-image: url(../img/decor-lines/decor-658.svg);
+        }
+    }
+    &--1482 {
+        &:before {
+            left: 0;
+            width: 62rem;
+            height: 156.1rem;
+            background-image: url(../img/decor-lines/decor-1482.svg);
+        }
+    }
+    &--1595 {
+        &:before {
+            left: 0;
+            width: 62rem;
+            height: 156.1rem;
+            background-image: url(../img/decor-lines/decor-1595.svg);
+        }
+    }
+}
+
+.section {
+    padding: 20rem 0;
+
+    @media(max-width: 992px) {
+        padding: 4rem 0 6rem;
+    }
+
+    &--pink {
+        background-color: $pink;
+    }
+
+    &--white {
+        background-color: $white;
+    }
+
+    &__inner {
+        @media(min-width: 992px) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    &__content {
+        width: 94.5rem;
+        flex-shrink: 0;
+
+        @media(max-width: 992px) {
+            width: 100%;
+            margin-top: 2rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 8rem;
+
+        @media(max-width: 992px) {
+            margin-bottom: 4rem;
+        }
+
+        @media(max-width: 500px) {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.content {
+    width: 94.5rem;
+
+    @media(max-width: 992px) {
+        width: 100%;
+    }
+}
+
+.section-inner {
+
+    @media(min-width: 992px) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.p-companies {
+    .clients {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.text {
+    @extend %inter-text-24;
+}
+
+.course .study-process {
+    background-color: $pink-bg
+}
+
+@import './progress';
+@import './animate';
+@import '../components/components';

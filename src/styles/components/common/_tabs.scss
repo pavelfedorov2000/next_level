@@ -1,0 +1,13 @@
+.tabs-content {
+    display: none;
+
+    &--active {
+        display: block;
+    }
+}
+
+.filter-btn {
+    &.tab--active {
+        border: 0.2rem solid $dark-gray;
+    }
+}

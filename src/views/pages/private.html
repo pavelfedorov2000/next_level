@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('../_head.html', {
+"title": "Частным лицам"
+})
+
+<body>
+
+    <div class="wrapper">
+        @@include('../../blocks/modules/header/_header.html')
+
+        <nav class="breadcrumbs">
+            <div class="container">
+                <ol class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a href="#">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="#">
+                            О нас
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="#">
+                            О компании
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <span>
+                            Частным лицам
+                        </span>
+                    </li>
+                </ol>
+            </div>
+        </nav>
+
+        <main class="page p-private decor-curve decor-curve--658">
+            <div class="container">
+                <h1>Частным лицам</h1>
+                <div class="p-private__top-text content text">
+                    <p>
+                        Откройтесь работе жизни мечты. Наши тренинги нацелены на ваш успех. Под руководством экспертов
+                        развивайте коммуникативные навыки и лидерские качества, обучайтесь менеджменту, финансовому
+                        управлению, предпринимательству, личной эффективности. Становитесь успешнее!
+                    </p>
+                </div>
+            </div>
+            @@include('../../blocks/modules/private/_people-reviews.html')
+            @@include('../../blocks/modules/future-courses/_future-courses.html')
+        </main>
+
+        @@include('../../blocks/modules/footer/_footer.html')
+
+        @@include('../../blocks/modules/popups/_popups.html')
+    </div>
+
+    @@include('../_js.html')
+
+</body>
+
+</html>

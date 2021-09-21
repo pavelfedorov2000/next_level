@@ -1,0 +1,19 @@
+.study-process {
+
+    padding-bottom: 24rem;
+    background-image: url(../img/decor-lines/study-process-decor.svg);
+    background-size: contain;
+    background-position-x: -5.2rem;
+    background-position-y: 3.2rem;
+    background-repeat: no-repeat;
+
+    @media(max-width: 992px) {
+        background-image: none;
+    }
+
+    // .study-process__cols
+
+    &__cols {
+        align-items: flex-start;
+    }
+}

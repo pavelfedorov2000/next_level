@@ -1,0 +1,60 @@
+.write-box {
+    background: $yellow;
+    border-radius: 5.7rem;
+    padding: 8rem;
+
+    @media(max-width: 992px) {
+        padding: 3rem;
+    }
+
+    @media(max-width: 500px) {
+        border-radius: 3.2rem;
+        padding: 2rem;
+    }
+
+    // .write-box__title
+
+    &__title {
+        margin-bottom: 4.4rem;
+
+        @media(max-width: 992px) {
+            margin-bottom: 2rem;
+        }
+
+        @media(max-width: 500px) {
+            font-size: 1.4rem;
+            line-height: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        a {
+            border-bottom: 0.2rem solid $dark-gray;
+        }
+    }
+
+    // .write-box__text
+
+    &__text {
+        margin-bottom: 5rem;
+
+        @media(max-width: 992px) {
+            margin-bottom: 3rem;
+        }
+
+        @media(max-width: 500px) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    // .write-box__btn
+
+    &__btn {
+        padding: 2.65rem 6.2rem;
+
+        @media(max-width: 500px) {
+            width: 100%;
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+    }
+}

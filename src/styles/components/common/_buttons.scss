@@ -1,0 +1,213 @@
+.btn {
+    display: inline-block;
+    font-size: 2rem;
+    line-height: 1.9rem;
+    text-align: center;
+    border-radius: 5.4rem;
+}
+
+.bg-btn {
+    //min-width: 32rem;
+    @extend .btn;
+    background-color: $dark;
+    color: $white;
+    font-weight: 700;
+    padding: 2.65rem 1rem;
+    transition: .3s background-color;
+
+    @media(max-width: 992px) {
+        //min-width: 24.6rem;
+        padding-top: 1.8rem;
+        padding-bottom: 1.8rem;
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: $dark-gray;
+        }
+    }
+}
+
+.border-btn {
+    background-color: transparent;
+    border-width: 0.1rem;
+    border-style: solid;
+    transition: .3s all;
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+.section-btn {
+    @extend .border-btn;
+    display: block;
+    border-color: $gray;
+    font-size: 2rem;
+    line-height: 2.6rem;
+    font-weight: 700;
+    color: $gray;
+    padding: 2.2rem 1.5rem;
+    margin: 0 auto;
+
+    @media(max-width: 768px) {
+        font-size: 1.8rem;
+        padding-top: 1.7rem;
+        padding-bottom: 1.7rem;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: $gray;
+        }
+    }
+}
+
+.enter-btn {
+    position: relative;
+    z-index: 100;
+    width: 16rem;
+    height: 7.2rem;
+    //border-radius: 7.2rem;
+    background-color: transparent;
+    @extend %flex-center;
+    font-size: 1.8rem;
+    line-height: 1.7rem;
+    font-weight: 700;
+
+    //transition: .3s background-color;
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        width: 0%;
+        height: 100%;
+        border-radius: 7.2rem;
+        background-color: $yellow;
+        transition: .3s width;
+
+        @media(max-width: 992px) {
+            display: none;
+        }
+    }
+
+    @media(max-width: 992px) {
+        border-radius: 7.2rem;
+        background-color: $yellow;
+    }
+
+    @media(max-width: 768px) {
+        height: 5rem;
+        font-size: 1.6rem;
+    }
+
+    @media (any-hover: hover) {
+        &:hover:before {
+            width: 100%;
+            //background-color: $yellow;
+        }
+    }
+
+    img {
+        display: inline-block;
+        margin-right: 2rem;
+    }
+}
+
+.filter-btn {
+    background-color: #fff;
+    border-radius: 9.5rem;
+    border: 0.2rem solid #fff;
+    height: 4.9rem;
+    display: inline-flex;
+    align-items: center;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    //padding-left: 2.22rem;
+    //padding-right: 2.22rem;
+    font-size: 1.8rem;
+    line-height: 1.7rem;
+    font-weight: 500;
+    color: $dark;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+
+    @media(max-width: 992px) {
+        font-size: 1.6rem;
+    }
+
+    @media(max-width: 500px) {
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+        height: 4.6rem;
+    }
+}
+
+.arrow-link {
+
+    background-color: transparent;
+    @extend %vertical-align;
+    transition: .3s color;
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: $yellow;
+        }
+    }
+
+    &__btn {
+        @extend %flex-center;
+        width: 8rem;
+        height: 7.2rem;
+        flex-shrink: 0;
+        background-color: $yellow;
+        border-radius: 7.2rem;
+        transform: rotate(-3deg);
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+
+        @media(max-width: 992px) {
+            width: 7rem;
+            height: 6.2rem;
+            border-radius: 6.2rem;
+        }
+
+        @media(max-width: 768px) {
+            width: 5rem;
+            height: 4.2rem;
+            border-radius: 4.2rem;
+        }
+
+        svg {
+            @media(max-width: 992px) {
+                width: 2.6rem;
+                height: 2.6rem;
+            }
+
+            @media(max-width: 768px) {
+                width: 1.5rem;
+                height: 1.5rem;
+            }
+        }
+    }
+}
+
+.review-link {
+    &__btn {
+        animation-name: scroll-x;
+        margin-left: 2.4rem;
+
+        svg {
+            transform: rotate(-90deg);
+        }
+    }
+}

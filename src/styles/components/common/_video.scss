@@ -1,0 +1,42 @@
+.video {
+    position: relative;
+    &__player {
+        @extend %pos-center-xy;
+        width: 9.6rem;
+        height: 9.6rem;
+        border-radius: 50%;
+        background-color: #FFF;
+        @extend %flex-center;
+        transition: .3s background-color;
+
+        @media(max-width: 992px) {
+            width: 5rem;
+            height: 5rem;
+        }
+
+        svg {
+            width: 2.8rem;
+            height: 3.3rem;
+
+            @media(max-width: 992px) {
+                width: 1.2rem;
+                height: 1.7rem;
+            }
+
+            path {
+                fill: $yellow;
+                transition: .3s fill;
+            }
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $yellow;
+
+                svg path {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+}

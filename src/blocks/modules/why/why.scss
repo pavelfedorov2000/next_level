@@ -1,0 +1,55 @@
+.why {
+
+    // .why__inner
+
+    &__inner {
+        align-items: flex-end;
+    }
+
+    &__content {
+        grid-gap: 8rem;
+
+        @media(max-width: 992px) {
+            grid-gap: 4rem;
+        }
+    }
+
+    // .why__img
+
+    &__img {
+        //width: 55rem;
+        padding-right: 3rem;
+        margin-bottom: 6.5rem;
+    }
+
+    // .why__text
+
+    &__text {
+        grid-gap: 2.5rem;
+
+        @media(max-width: 768px) {
+            grid-gap: 1.5rem;
+        }
+    }
+
+    // .why__step-text
+
+    &__step-text {
+
+        p {
+            &:nth-child(2) {
+                max-width: 86.4rem;
+                margin-left: auto;
+                text-align: right;
+            }
+
+            &:last-child {
+                span {
+                    display: block;
+                    margin-left: auto;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.course-program {
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 43rem;
+        left: 0;
+        z-index: 100;
+        width: 62rem;
+        height: 156.1rem;
+        background-image: url(../img/decor-lines/decor-1482.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        @media(max-width: 992px) {
+            display: none;
+        }
+    }
+
+    // .course-program__title
+
+    &__title {
+
+        .decor:before {
+            height: 12rem;
+        }
+    }
+}

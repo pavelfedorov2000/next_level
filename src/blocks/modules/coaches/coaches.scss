@@ -1,0 +1,64 @@
+.s-coaches {
+
+    padding-top: 10.3rem;
+
+    // .coaches__content
+
+    &__content {
+        width: 92rem;
+
+        @media(max-width: 992px) {
+            width: 100%;
+        }
+    }
+
+    // .coaches__title
+
+    &__title {
+        margin-top: 8rem;
+
+        @media(max-width: 992px) {
+            margin-top: 3rem;
+        }
+
+        .decor {
+            margin-left: -29.6rem;
+
+            @media(max-width: 992px) {
+                margin-left: 0;
+            }
+
+            &:before {
+                right: 10rem;
+            }
+        }
+    }
+
+    // .coaches__subtitle
+
+    &__subtitle {
+        max-width: 82.4rem;
+        margin-top: 2.4rem;
+    }
+}
+
+.coaches-slider__item {
+    transition: .5s all;
+    height: 48rem;
+
+    @media(max-width: 992px) {
+        height: auto;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}

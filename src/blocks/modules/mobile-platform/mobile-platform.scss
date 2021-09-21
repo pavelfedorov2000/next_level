@@ -1,0 +1,148 @@
+.mobile-platform {
+
+    h1 {
+        margin-bottom: 0;
+    }
+
+    // .mobile-platform__top
+
+    &__top {
+        grid-gap: 1.3rem;
+        max-width: 137.8rem;
+
+        @media(max-width: 768px) {
+            grid-gap: 1rem;
+        }
+    }
+
+    // .mobile-platform__subtitle-inner
+
+    &__subtitle-inner {
+        @extend %flex-row-center;
+
+        @media(max-width: 768px) {
+            display: block;
+        }
+    }
+
+    // .mobile-platform__row
+
+    &__row {
+        padding-top: 15rem;
+
+        @media(max-width: 992px) {
+            padding-top: 10rem;
+        }
+
+        @media(min-width: 992px) {
+            margin: 0 -2.4rem;
+        }
+
+        @media(min-width: 768px) {
+            display: flex;
+            align-items: flex-start;
+            margin: 0 -1.5rem;
+        }
+
+        @media(max-width: 768px) {
+            padding-top: 5rem;
+        }
+
+        @media(max-width: 500px) {
+            padding-top: 3rem;
+        }
+    }
+
+    &__col {
+        @media(min-width: 992px) {
+            padding: 0 2.4rem;
+        }
+
+        @media(min-width: 768px) {
+            width: 50%;
+            padding: 0 1.5rem;
+
+        }
+    }
+
+    &__col+&__col {
+        @media(max-width: 992px) {
+            margin-top: 3rem;
+        }
+    }
+
+    &__card {
+        padding: 4rem 7.7rem 6.4rem 4.8rem;
+        @media(max-width: 992px) {
+            padding: 3rem;
+        }
+        @media(max-width: 768px) {
+            padding: 2rem;
+        }
+    }
+
+    &__card+&__card {
+        margin-top: 8.2rem;
+
+        @media(max-width: 992px) {
+            margin-top: 3rem;
+        }
+    }
+
+    // .mobile-platform__card-img
+
+    &__card-img {
+        margin-bottom: 4rem;
+        @media(max-width: 992px) {
+            margin-bottom: 2rem;
+        }
+        img {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    // .mobile-platform__card-title
+
+    &__card-title {
+        margin-bottom: 2.8rem;
+
+        @media(max-width: 992px) {
+            margin-bottom: 2rem;
+        }
+
+        @media(max-width: 500px) {
+            margin-bottom: 1rem;
+        }
+
+        .decor:before {
+            height: 7.2rem;
+
+            @media(max-width: 992px) {
+                height: 5rem;
+            }
+
+            @media(max-width: 768px) {
+                height: 3rem;
+            }
+
+            //top: -2.8rem;
+        }
+    }
+
+    // .mobile-platform__card-text
+
+    &__card-text {
+        p+p {
+            margin-top: 3rem;
+
+            @media(max-width: 992px) {
+                margin-top: 2rem;
+            }
+
+            @media(max-width: 500px) {
+                margin-top: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+.step-card {
+    display: grid;
+    padding: 2.4rem 1.4rem 4rem 2.4rem;
+    grid-template-columns: minmax(max-content, 8.5rem) auto;
+    grid-gap: 0.5rem 0.3rem;
+
+    @media(max-width: 992px) {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+    }
+
+    @media(max-width: 500px) {
+        padding: 1.5rem;
+    }
+
+    &__num {
+        @extend %title-80;
+        color: $yellow;
+
+        @media(max-width: 500px) {
+            font-size: 2.4rem;
+        }
+    }
+
+    // .study-process__card-title
+
+    &__title {
+        @extend %text-24;
+        font-weight: 500;
+        color: $dark;
+        margin-top: 4rem;
+
+        @media(max-width: 992px) {
+            margin-top: 0;
+        }
+
+        @media(max-width: 500px) {
+            font-size: 1.6rem;
+        }
+    }
+
+    // .study-process__card-text
+
+    &__text {
+        @extend %inter-text-16;
+        grid-column: 2 / 3;
+
+        @media(max-width: 992px) {
+            grid-column: 1 / 2;
+        }
+    }
+}

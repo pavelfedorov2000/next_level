@@ -1,0 +1,74 @@
+.input {
+    background-color: $white;
+    border-radius: 5.4rem;
+    @extend %inter-text-24;
+    color: $gray;
+    padding: 1.8rem 4rem;
+
+    @media(max-width: 992px) {
+        padding: 1.65rem 2.5rem;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+
+    &::placeholder {
+        color: $gray;
+    }
+}
+
+.textarea {
+    @extend .input;
+    border-radius: 3.2rem;
+    min-height: 20.2rem;
+    @media(max-width: 500px) {
+        border-radius: 2rem;
+        min-height: 15rem;
+    }
+}
+
+.form {
+
+    // .form__footer
+
+    &__footer {
+        @extend %flex-row-center;
+    }
+
+    // .form__btn
+
+    &__btn {
+        padding: 2.65rem 6.2rem;
+
+        @media(max-width: 500px) {
+            width: 100%;
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+    }
+
+    // .form__agreement
+
+    &__agreement {
+        max-width: 41.6rem;
+
+        @media(max-width: 992px) {
+            display: block;
+            max-width: 100%;
+            margin-top: 1rem;
+        }
+    }
+}
+
+.form-agree {
+    @extend %inter-text-16;
+    color: $dark;
+
+    @media(max-width: 500px) {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}

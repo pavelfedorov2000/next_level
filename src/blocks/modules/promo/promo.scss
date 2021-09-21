@@ -1,0 +1,218 @@
+.promo {
+
+    position: relative;
+    z-index: 1;
+    padding-top: 0;
+    padding-bottom: calc(200 * 100vh / 1170);
+    height: 100vh;
+
+    @media(max-width: 992px) {
+        height: auto;
+        padding-top: 0;
+    }
+
+    &:before,
+    &:after {
+        position: absolute;
+        z-index: -1;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &:before {
+        content: '';
+        background-image: url(../img/decor-lines/1.svg);
+        width: 506 * 100vh / 1170;
+        height: 1104 * 100vh / 1170;
+        bottom: 49 * 100vh / 1170;
+
+        @media(max-width: 1200px) {
+            display: none;
+        }
+    }
+
+    &:after {
+        content: '';
+        width: 448 * 100vh / 1170;
+        height: 1048 * 100vh / 1170;
+        bottom: 4vh;
+        right: -2%;
+        background-image: url(../img/decor-lines/2.svg);
+
+        @media(max-width: 1200px) {
+            display: none;
+        }
+    }
+
+    // .promo__img
+
+    &__img {
+        position: absolute;
+        top: 20vh;
+        left: 0;
+        width: 974 * 100vh / 1170;
+        height: 858 * 100vh / 1170;
+
+        @media(max-width: 992px) {
+            position: static;
+            width: 22.2rem;
+            height: auto;
+            margin-left: -1.2rem;
+        }
+    }
+
+    // .promo__inner
+
+    &__inner {
+        position: relative;
+        justify-content: center;
+        z-index: 1;
+        padding-top: 200 * 100vh / 1170;
+        margin-bottom: 120 * 100vh / 1170;
+
+        @media(max-width: 1200px) {
+            margin-bottom: 0;
+        }
+
+        @media(max-width: 992px) {
+            display: block;
+            padding-top: 7rem;
+        }
+    }
+
+    // .promo__title
+
+    &__title {
+        font-size: 178 * 100vh / 1170;
+        line-height: 172 * 100vh / 1170;
+
+        @media(max-width: 992px) {
+            font-size: 8.6rem;
+            line-height: 8.3rem;
+            text-align: center;
+        }
+
+        @media(max-width: 768px) {
+            font-size: 5rem;
+            line-height: 5.5rem;
+        }
+    }
+
+    &__logo {
+        width: 539 * 100vh / 1170;
+        height: 69 * 100vh / 1170;
+
+        @media(max-width: 992px) {
+            width: auto;
+            height: auto;
+
+            img {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    // .promo__content
+
+    &__content {
+        width: 770 * 100vh / 1170;
+        padding-left: 40 * 100vh / 1170;
+
+        @media(max-width: 992px) {
+            width: 100%;
+            margin-left: 0;
+            padding-left: 0;
+        }
+    }
+
+    // .promo__slogan
+
+    &__slogan {
+        font-size: 60 * 100vh / 1170;
+        line-height: 72 * 100vh / 1170;
+        letter-spacing: normal;
+        margin-bottom: 32 * 100vh / 1170;
+        text-transform: none;
+
+        @media(max-width: 992px) {
+            font-size: 2.8rem;
+            line-height: 3.5rem;
+            display: grid;
+            grid-row-gap: 0.8rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .decor:before {
+            height: 69 * 100vh / 1170;
+            border-radius: 3.3rem;
+
+            @media(max-width: 500px) {
+                width: 12rem;
+            }
+        }
+
+        .no-decor {
+            white-space: nowrap;
+        }
+    }
+
+    // .promo__text
+
+    &__text {
+        font-size: 24 * 100vh / 1170;
+        line-height: 36 * 100vh / 1170;
+        margin-bottom: 72 * 100vh / 1170;
+        color: $gray;
+
+        @media(max-width: 992px) {
+            font-size: 1.8rem;
+            line-height: 2.6rem;
+            margin-bottom: 2.7rem;
+        }
+
+        @media(max-width: 768px) {
+            font-size: 1.6rem;
+        }
+
+        @media(max-width: 500px) {
+            font-size: 1.2rem;
+            line-height: 1.7rem;
+        }
+    }
+
+    // .promo__btn
+
+    &__btn {
+        display: inline-block;
+        padding: 2.65rem 3.12rem;
+
+        @media(max-width: 992px) {
+            width: 26.6rem;
+            padding: 1.8rem 1rem;
+        }
+    }
+
+    // .promo__scroll
+
+    &__scroll {
+        position: relative;
+        width: 20rem;
+        @extend %flex-row-center;
+        text-align: center;
+        margin: 0 auto;
+        @extend %inter-text;
+        font-size: 18 * 100vh / 1170;
+        line-height: 22 * 100vh / 1170;
+        font-weight: 500;
+
+        @media(max-width: 1200px) {
+            display: none;
+        }
+
+        img {
+            animation-duration: 1.5s;
+            animation-name: scroll;
+            animation-iteration-count: infinite;
+        }
+    }
+}

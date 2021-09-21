@@ -1,0 +1,33 @@
+.breadcrumbs {
+
+    padding: 8rem 0 4rem;
+
+    @media(max-width: 992px) {
+        padding: 3rem 0;
+    }
+
+    &__item {
+        position: relative;
+        display: inline-block;
+        //padding-right: 1rem;
+        margin-right: 1.5rem;
+        @extend %inter-text-16;
+        border-bottom: 0.1rem solid $dark-gray;
+
+        &:after {
+            content: '/';
+            position: absolute;
+            @extend %pos-center-y;
+            right: -1rem;
+            @extend %inter-text-16;
+        }
+
+        &:last-child {
+            border-bottom: none;
+
+            &:after {
+                content: '';
+            }
+        }
+    }
+}
